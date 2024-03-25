@@ -1,1 +1,48 @@
+class BudgetCalculator:
+    def __init__(self):
+        self.income = 0
+        self.expenses = {}
+        self.special_occasion_budget = 0
+        self.emergency_fund = 0
+        self.stock_investment = 0
+    
+    def set_income(self):
+        self.income = float(input("Enter your monthly income: "))
+
+    def apply_budget_allocation(self):
+        if self.special_occasion_budget:
+            remaining_income = self.income - self.special_occasion_budget
+        else:
+            remaining_income = self.income
+
+        self.expenses['necessities'] = remaining_income * 0.4
+        self.expenses['non-essential'] = remaining_income * 0.4
+        self.emergency_fund = remaining_income * 0.1
+        self.stock_investment = remaining_income * 0.1
+
+    def set_special_occasion_budget(self):
+        special_occasion = input("Do you have any special occasion coming up? (yes/no): ").lower()
+        if special_occasion == 'yes':
+            self.special_occasion_budget = float(input("Enter the budget for the special occasion: "))
+
+    def generate_report(self):
+        print("\n===== Budget Report =====")
+        print(f"Income: Rs{self.income}")
+        print("---- Budgeted Expenses ----")
+        for category, amount in self.expenses.items():
+            print(f"{category.capitalize()}: Rs{amount}")
+        print(f"Emergency Fund: Rs{self.emergency_fund}")
+        print(f"Stock Investment: Rs{self.stock_investment}")
+        if self.special_occasion_budget:
+            print(f"Special Occasion Budget: Rs{self.special_occasion_budget}")
+
+    def run_budget_calculator(self):
+        self.set_income()
+        self.set_special_occasion_budget()
+        self.apply_budget_allocation()
+        self.generate_report()
+
+# Corrected Usage
+budget_calculator = BudgetCalculator()
+budget_calculator.run_budget_calculator()
 
