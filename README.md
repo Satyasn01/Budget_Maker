@@ -15,12 +15,20 @@ BudgetMaker is a Python program designed to help users manage their monthly budg
 ## Installation
 
 1. Clone the repository to your local machine:
+   ```bash
    git clone https://github.com/satyasn01/Budget_Maker.git
-2. Navigate to the `BudgetMaker` directory:
-   cd BudgetMaker
+   ```
+
+2. Navigate to the `Budget_Maker` directory:
+   ```bash
+   cd Budget_Maker
+   ```
+
 3. Run the program:
+   ```bash
    python main.py
-   
+   ```
+
 ## Usage
 
 1. Run the program and enter your monthly income when prompted.
@@ -35,7 +43,3 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-You can save this content to a file named `README.md` in the root directory of your GitHub repository. Update placeholders like `your-username`, add more specific instructions or details about your program, and include any additional sections or information relevant to your project.
